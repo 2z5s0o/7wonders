@@ -38,6 +38,11 @@ h1 {
     width: 100vw;
 }
 
+.fullpage.section {
+    height: 30vh;
+    width: 100vw;
+}
+
 .top-bar {
     position: absolute;
     top: 0;
