@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    /* background-color: #000; */
+    background-color: rgba(0,0,0,0);
+    color: #eee;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px 40px;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+}
+
+h1 {
+    font-size: 70px;
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0px 4px 8px black;
+}
+
+.fullpage {
+    height: 100vh;
+    width: 100vw;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0) 100%);
+}
+
+.top-bar h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    margin: 0;
+    padding: 10px;
+    pointer-events: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(3px) brightness(0.7);
+}
+
+.bottom-bar p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main-buttons {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+a.wonder1 { background-image: url('greatwallofchina.jpg'); }
+a.wonder2 { background-image: url('petra.jpg'); }
+a.wonder3 { background-image: url('colosseum.jpg'); }
+a.wonder4 { background-image: url('chichenitza.jpg'); }
+a.wonder5 { background-image: url('machupicchu.jpg'); }
+a.wonder6 { background-image: url('tajmahal.jpg'); }
+a.wonder7 { background-image: url('christtheredeemer.jpg'); }
+
+body.wonder1 {
+    background-color: #b5cadf;
+    background-image: url('bg_greatwallofchina.jpg');
+}
+body.wonder2 {
+    background-color: #0d0805;
+    background-image: url('bg_petra.jpg');
+}
+body.wonder3 {
+    background-color: #227bef;
+    background-image: url('bg_colosseum.jpg');
+}
+body.wonder4 {
+    background-color: #7fb4ea;
+    background-image: url('bg_chichenitza.jpg');
+}
+body.wonder5 {
+    background-color: #d5f3fe;
+    background-image: url('bg_machupicchu.jpg');
+}
+body.wonder6 {
+    background-color: #1f0a05;
+    background-image: url('bg_tajmahal.jpg');
+}
+body.wonder7 {
+    background-color: #e29c3d;
+    background-image: url('bg_christtheredeemer.jpg');
+}
+
+.main-buttons > div {
+    width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.main-buttons .zoom {
+    transition: transform .3s ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.main-buttons .zoom:hover {
+    transform: scale(1.1);
+    transition-delay: 0s;
+}
+
+.main-buttons a {
+    transition: filter .4s ease-in-out;
+    transition-delay: 0s;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-buttons a:hover {
+    filter: brightness(0.7) blur(2px);
+    transition-delay: 0.4s;
+}
+
+.main-buttons .hiddentext {
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    float: left;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+    line-height: 150%;
+    font-size: 120%;
+    text-shadow: 0px 2px 6px #333;
+    /* display: none; */
+}
+
+.main-buttons .zoom:hover .hiddentext {
+    transition-delay: 0.4s;
+    /* display: block; */
+    opacity: 100%;
+}
+
+.more-info {
+    position: absolute;
+    bottom: 10;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0px 4px 6px black;
+    /* background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0) 100%); */
+}
+
+.appear {
+    position: absolute;
+    top: 100%;
+    margin: 15px;
+}
+
+.appear div {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(3px) brightness(0.6);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.appear p {
+    margin: 0;
+}
+
+.appear a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.form {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+}
+
+.form h2 {
+    color: #333;
+    margin: 6px;
+}
+
+.form input,button {
+    margin: 6px;
+    width: 200px;
+}
+
+
+.form textarea {
+    margin: 6px;
+    width: 415px;
+    padding: 4px;
+}
